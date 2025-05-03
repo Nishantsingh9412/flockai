@@ -4,6 +4,8 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import path from "path";
+import authRoutes from "./routes/auth.js";
+import otpRoutes from "./routes/otpRoutes.js";
 // import progressRoute from "./routes/progress.js";
 
 
@@ -17,6 +19,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // app.use('/api/v1/progress',progressRoute);
+app.use('/auth', authRoutes);
+app.use('/otp', otpRoutes)
 
 
 
