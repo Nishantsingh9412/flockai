@@ -14,7 +14,7 @@ export const sendVerificationEmail = async (email, otp) => {
             `<h1>Please confirm your OTP</h1>
          <p>Here is your OTP code: ${otp}</p>`
         );
-        console.log("Email sent successfully: ", mailResponse);
+        // console.log("Email sent successfully: ", mailResponse);
     } catch (error) {
         console.log("Error occurred while sending email: ", error);
         throw error;
@@ -61,7 +61,7 @@ export const sendOTP = async (req, res) => {
         console.log('Generated OTP : ', otp);
         res.status(200).json({
             success: true,
-            message: 'OTP sent successfully',
+            message: 'OTP sent successfully , please check your email (spam folder too)',
             otp,
         });
     } catch (error) {

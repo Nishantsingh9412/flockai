@@ -6,6 +6,8 @@ import cors from "cors";
 import path from "path";
 import authRoutes from "./routes/auth.js";
 import otpRoutes from "./routes/otpRoutes.js";
+import wishlistRoute from "./routes/wishlist.js";
+import mywishlist from "./routes/myWishlist.js";  
 // import progressRoute from "./routes/progress.js";
 
 
@@ -21,6 +23,8 @@ app.use(cors(corsOptions));
 // app.use('/api/v1/progress',progressRoute);
 app.use('/auth', authRoutes);
 app.use('/otp', otpRoutes)
+app.use('/wishlist',wishlistRoute)
+app.use('/my-wishlist', mywishlist)
 
 
 

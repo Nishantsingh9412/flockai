@@ -203,7 +203,7 @@ const SignUp = () => {
                     <div className="max-w-md mx-auto w-full">
                         <div className="flex space-x-4">
                             <div className="w-1/2">
-                                <label className='font-bold text-lg'>Pehla naam</label>
+                                <label className='font-bold text-lg'>First Name</label>
                                 <input
                                     type="text"
                                     value={fname}
